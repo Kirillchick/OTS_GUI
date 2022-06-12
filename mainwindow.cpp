@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    MainWindow::numIteration = 0;
+    connect(timer, &QTimer::timeout, this, MainWindow::Iteration(simulationModel));
 }
 
 MainWindow::~MainWindow()
@@ -22,11 +24,15 @@ void MainWindow::on_simulate_Button_clicked()
     int maxAngleError = ui->e_input->text().toInt();
     simulationModel = new Model(truePointCoordX, truePointCoordY, baseL, maxAngleError);
     timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, MainWindow::Iteration(simulationModel));
+
     //timer->start(100);
 }
 
 void MainWindow::Iteration(Model* model)
 {
+    if (MainWindow::numIteration < 1000)
+    {
 
+    }
+    MainWindow::numIteration += 5;
 }

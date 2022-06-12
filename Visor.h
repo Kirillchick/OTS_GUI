@@ -22,6 +22,6 @@ public:
     int GetMaxAngleErorr() const;
     int GetAngle() const;
     int GetPosition() const;
-    void Recalculate(int position);
+    void Recalculate(const int position);
 };
 #endif // VISOR_H

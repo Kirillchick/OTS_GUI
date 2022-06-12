@@ -14,6 +14,7 @@ private:
     std::pair<int, int> CalculateVectorCoordinate(const int initalPosition) const;
 public:
     explicit Vector(const DefinedPoint point, const int initalPosition);
+    void Recalculate(const int position);
     std::pair<int, int> GetVectorCoordinate() const;
 };
 

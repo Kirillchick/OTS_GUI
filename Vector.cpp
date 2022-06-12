@@ -20,3 +20,8 @@ std::pair<int, int> Vector::GetVectorCoordinate() const
 {
     return m_vectorCoordinate;
 }
+
+void Vector::Recalculate(int position)
+{
+    SetVectorCoordinate(position);
+}

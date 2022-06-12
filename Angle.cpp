@@ -12,3 +12,8 @@ int Angle::СalculateAngle(const Vector vectorCoordinate) const
     // Понять что возвращат градус или радиан?
     return qAtan2(vectorCoordinate.GetVectorCoordinate().second, vectorCoordinate.GetVectorCoordinate().first);
 }
+
+void Angle::Recalculate(const Vector vectorCoordinate)
+{
+    m_angleValue = СalculateAngle(vectorCoordinate);
+}

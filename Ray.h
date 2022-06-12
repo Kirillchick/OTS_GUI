@@ -6,20 +6,22 @@
 
 class Ray
 {
-    // Добавить position ??
 private:
-    const int m_maxAngleError;
+    //const int m_maxAngleError;
     int m_angleValue;
-    std::pair<int, int> m_rayCoordinate;
-
+    //std::pair<int, int> m_rayCoordinate;
+    int m_errorSign;
+    int m_position;
 public:
     enum ErrorSign
     {
         POSITIVE = 1,
         NEGATIVE = -1
     };
-    Ray(Vector vectorCoordinate, Angle angle, int maxAngleError, int errorSign);
+    //Ray(Vector vectorCoordinate, Angle angle, int maxAngleError, int errorSign, int position);
+    Ray(const Angle angle, const int errorSign, const int position, const int maxAngleError);
     int GetAngleSign() const;
+    void Recalculate(const Angle angle, const int errorSign, const int position, const int maxAngleError);
 };
 
 #endif // RAY_H

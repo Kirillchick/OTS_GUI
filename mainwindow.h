@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    static int numIteration;
 
 private slots:
     void on_simulate_Button_clicked();

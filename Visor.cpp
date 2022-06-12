@@ -6,8 +6,8 @@ Visor::Visor(const int trueCoordinateX, const int trueCoordinateY, const int cur
           m_point(DefinedPoint(trueCoordinateX, trueCoordinateY)),
           m_vectorCoordinate(Vector(m_point, m_position)),
           m_angle(Angle(m_vectorCoordinate)),
-          m_positiveErrorRay(Ray(m_vectorCoordinate, m_angle, m_maxAngleError, Ray::POSITIVE)),
-          m_negativeErrorRay(Ray(m_vectorCoordinate, m_angle, m_maxAngleError, Ray::NEGATIVE))
+          m_positiveErrorRay(Ray(m_vectorCoordinate, m_angle, m_maxAngleError, Ray::POSITIVE, currentPosition)),
+          m_negativeErrorRay(Ray(m_vectorCoordinate, m_angle, m_maxAngleError, Ray::NEGATIVE, currentPosition))
 {
 
 };
@@ -37,7 +37,7 @@ int Visor::GetPosition() const
     return m_position;
 }
 
-void Visor::Recalculate(int position)
+void Visor::Recalculate(const int position)
 {
 
 }

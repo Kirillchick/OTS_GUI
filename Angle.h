@@ -12,6 +12,7 @@ private:
 public:
     Angle(const Vector vectorCoordinate);
     int GetAngle() const;
+    void Recalculate(const Vector vectorCoordinate);
 };
 
 #endif // ANGLE_H
