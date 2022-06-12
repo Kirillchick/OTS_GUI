@@ -6,8 +6,8 @@ Visor::Visor(const int trueCoordinateX, const int trueCoordinateY, const int cur
           m_point(DefinedPoint(trueCoordinateX, trueCoordinateY)),
           m_vectorCoordinate(Vector(m_point, m_position)),
           m_angle(Angle(m_vectorCoordinate)),
-          m_positiveErrorRay(Ray(m_vectorCoordinate, m_angle, m_maxAngleError, Ray::POSITIVE, currentPosition)),
-          m_negativeErrorRay(Ray(m_vectorCoordinate, m_angle, m_maxAngleError, Ray::NEGATIVE, currentPosition))
+          m_positiveErrorRay(Ray(m_angle, Ray::POSITIVE, currentPosition, m_maxAngleError)),
+          m_negativeErrorRay(Ray(m_angle, Ray::NEGATIVE, currentPosition, m_maxAngleError))
 {
 
 };
@@ -39,5 +39,8 @@ int Visor::GetPosition() const
 
 void Visor::Recalculate(const int position)
 {
-
+    m_vectorCoordinate.Recalculate(position);
+    m_angle.Recalculate(m_vectorCoordinate);
+    m_positiveErrorRay.Recalculate(m_angle, Ray::POSITIVE, position, m_maxAngleError);
+    m_negativeErrorRay.Recalculate(m_angle, Ray::NEGATIVE, position, m_maxAngleError);
 }

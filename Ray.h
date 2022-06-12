@@ -21,6 +21,7 @@ public:
     //Ray(Vector vectorCoordinate, Angle angle, int maxAngleError, int errorSign, int position);
     Ray(const Angle angle, const int errorSign, const int position, const int maxAngleError);
     int GetAngleSign() const;
+    int GetAngle() const;
     void Recalculate(const Angle angle, const int errorSign, const int position, const int maxAngleError);
 };
 

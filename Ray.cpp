@@ -16,6 +16,12 @@ void Ray::Recalculate(const Angle angle, const int errorSign, const int position
 {
     Ray(angle, errorSign, position, maxAngleError);
 }
+
+int Ray::GetAngle() const
+{
+    return m_angleValue;
+}
+
 /*
 int Ray::GetAngleSign() const
 {

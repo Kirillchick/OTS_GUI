@@ -54,3 +54,8 @@ void Analyzer::CalculateDiagonals()
     m_diagonal1 = qSqrt(pow(m_k3.first - m_k1.first, 2) + pow(m_k3.second - m_k1.second, 2));
     m_diagonal2 = qSqrt(pow(m_k2.first - m_k4.first, 2) + pow(m_k2.second - m_k4.second, 2));
 }
+
+void Analyzer::Recalculate(const Visor &visor1, const Visor &visor2)
+{
+    Analyzer(visor1, visor2);
+}

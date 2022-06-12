@@ -32,7 +32,7 @@ void MainWindow::Iteration(Model* model)
 {
     if (MainWindow::numIteration < 1000)
     {
-
+        simulationModel->Iteration(MainWindow::numIteration);
     }
     MainWindow::numIteration += 5;
 }

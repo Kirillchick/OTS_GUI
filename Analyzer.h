@@ -23,6 +23,7 @@ public:
     Analyzer(const Visor& visor1, const Visor& visor2);
     int GetDiagonal1(); // ?
     int GetDiagonal2(); // ?
+    void Recalculate(const Visor& visor1, const Visor& visor2);
 };
 
 #endif // ANALYZER_H

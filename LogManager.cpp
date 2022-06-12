@@ -1,4 +1,4 @@
-#include "LogMаnаger.h"
+#include "LogManager.h"
 
 LogManager::LogManager(int diagonal1, int diagonal2)
 {

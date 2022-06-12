@@ -1,5 +1,6 @@
-#ifndef LOGMАNАGER_H
-#define LOGMАNАGER_H
+#ifndef LOGMANAGER_H
+#define LOGMANAGER_H
+
 #include <vector>
 
 class LogManager
@@ -13,4 +14,4 @@ public:
     std::vector<std::vector<int>> GetLogTable();
 };
 
-#endif // LOGMАNАGER_H
+#endif // LOGMANAGER_H

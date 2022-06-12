@@ -26,6 +26,9 @@ HEADERS += \
     Analyzer.h \
     Angle.h \
     DefinedPoint.h \
+    LogManager.h \
+    LogMаnаger.h \
+    LogMаnаger.h \
     LogMаnаger.h \
     Model.h \
     PaintWidget.h \

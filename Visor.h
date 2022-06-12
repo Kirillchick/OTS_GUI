@@ -9,7 +9,7 @@ class Visor
 private:
     int m_position;
     const int m_maxAngleError;
-    DefinedPoint m_point;
+    const DefinedPoint m_point;
     Vector m_vectorCoordinate;
     Angle m_angle;
     Ray m_positiveErrorRay;
