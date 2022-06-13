@@ -7,12 +7,12 @@
 class Analyzer
 {
 private:
-    std::pair<int, int> m_k1;
-    std::pair<int, int> m_k2;
-    std::pair<int, int> m_k3;
-    std::pair<int, int> m_k4;
-    int m_diagonal1;
-    int m_diagonal2;
+    std::pair<double, double> m_k1;
+    std::pair<double, double> m_k2;
+    std::pair<double, double> m_k3;
+    std::pair<double, double> m_k4;
+    double m_diagonal1;
+    double m_diagonal2;
     void InitializeAttributes(const Visor& visor1, const Visor& visor2);
     void CalculateK1(const Visor& visor1, const Visor& visor2);
     void CalculateK2(const Visor& visor1, const Visor& visor2);
@@ -21,8 +21,8 @@ private:
     void CalculateDiagonals();
 public:
     Analyzer(const Visor& visor1, const Visor& visor2);
-    int GetDiagonal1(); // ?
-    int GetDiagonal2(); // ?
+    double GetDiagonal1(); // ?
+    double GetDiagonal2(); // ?
     void Recalculate(const Visor& visor1, const Visor& visor2);
 };
 

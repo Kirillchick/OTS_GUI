@@ -6,12 +6,12 @@
 class LogManager
 {
 private:
-    std::vector<std::vector<int>> m_logTable;
+    std::vector<std::vector<double>> m_logTable;
     int m_logNum = 0;
 public:
-    LogManager(int diagonal1, int diagonal2);
-    void Iteration(int diagonal1, int diagonal2);
-    std::vector<std::vector<int>> GetLogTable();
+    LogManager(double diagonal1, double diagonal2);
+    void Iteration(double diagonal1, double diagonal2);
+    std::vector<std::vector<double>> GetLogTable();
 };
 
 #endif // LOGMANAGER_H

@@ -1,18 +1,16 @@
 #ifndef TRUEPOINT_H
 #define TRUEPOINT_H
 
-#include <QRandomGenerator>
-
 class TruePoint
 {
 private:
-    const double m_fieldSizeX = 500;
-    const int m_fieldSizeY = 500;
-    const int m_trueX;
-    const int m_trueY;
+    const double m_fieldSizeX = 500.0;
+    const double m_fieldSizeY = 500.0;
+    const double m_trueX;
+    const double m_trueY;
     //int GenerateRandomPoint(const int fieldSize) const;
 public:
-    explicit TruePoint(const int coordinateX, const int coordinateY);
+    explicit TruePoint(const double coordinateX, const double coordinateY);
     int GetTrueX() const;
     int GetTrueY() const;
 };

@@ -1,11 +1,8 @@
 #include "TruePoint.h"
 
-TruePoint::TruePoint(const int coordinateX, const int coordinateY) : m_trueX(coordinateX), m_trueY(coordinateY)
-    //m_trueX(GenerateRandomPoint(fieldSizeX)),
-    //m_trueY(GenerateRandomPoint(fieldSizeY))
-{
-
-}
+TruePoint::TruePoint(const double coordinateX, const double coordinateY)
+    : m_trueX(coordinateX),
+      m_trueY(coordinateY) {}
 
 /*
 int TruePoint::GenerateRandomPoint(const int fieldSize) const
@@ -15,6 +12,7 @@ int TruePoint::GenerateRandomPoint(const int fieldSize) const
     return randomNumber.bounded(0, fieldSize);
 }
 */
+
 int TruePoint::GetTrueX() const
 {
     return m_trueX;

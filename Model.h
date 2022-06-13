@@ -8,15 +8,15 @@
 class  Model
 {
 private:
-    int m_baseL;
+    double m_baseL;
     Visor m_visor1;
     Visor m_visor2;
     Analyzer m_analyzer;
     LogManager m_logManager;
 public:
-    Model(const int trueCoordinateX, const int trueCoordinateY, const int baseL, const int maxAngleError, int position = 0);
-    void Iteration(int position);
-    std::vector<std::vector<int>> GetLogTable();
+    Model(const double trueCoordinateX, const double trueCoordinateY, const double baseL, const double maxAngleError, const double position = 0.0);
+    void Iteration(double position);
+    std::vector<std::vector<double>> GetLogTable();
 };
 
 #endif // MODEL_H

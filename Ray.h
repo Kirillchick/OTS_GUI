@@ -7,10 +7,10 @@ class Ray
 {
 private:
     //const int m_maxAngleError;
-    int m_angleValue;
+    double m_angleValue;
     //std::pair<int, int> m_rayCoordinate;
     int m_errorSign;
-    int m_position;
+    double m_position;
 public:
     enum ErrorSign
     {
@@ -18,10 +18,10 @@ public:
         NEGATIVE = -1
     };
     //Ray(Vector vectorCoordinate, Angle angle, int maxAngleError, int errorSign, int position);
-    Ray(const Angle angle, const int errorSign, const int position, const int maxAngleError);
+    Ray(const Angle angle, const int errorSign, const double position, const double maxAngleError);
     int GetAngleSign() const;
-    int GetAngle() const;
-    void Recalculate(const Angle angle, const int errorSign, const int position, const int maxAngleError);
+    double GetAngle() const;
+    void Recalculate(const Angle angle, const int errorSign, const double position, const double maxAngleError);
 };
 
 #endif // RAY_H

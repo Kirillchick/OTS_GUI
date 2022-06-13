@@ -1,6 +1,6 @@
 #include "Model.h"
 
-Model::Model(const int trueCoordinateX, const int trueCoordinateY, const int baseL, const int maxAngleError, int position)
+Model::Model(const double trueCoordinateX, const double trueCoordinateY, const double baseL, const double maxAngleError, const double position)
     : m_baseL(baseL),
       m_visor1(Visor(trueCoordinateX, trueCoordinateY, position, maxAngleError)),
       m_visor2(Visor(trueCoordinateX, trueCoordinateY, position + m_baseL, maxAngleError)),
@@ -10,7 +10,7 @@ Model::Model(const int trueCoordinateX, const int trueCoordinateY, const int bas
 
 }
 
-void Model::Iteration(int position)
+void Model::Iteration(double position)
 {
     m_visor1.Recalculate(position);
     m_visor2.Recalculate(position + m_baseL);
@@ -18,7 +18,7 @@ void Model::Iteration(int position)
     m_logManager.Iteration(m_analyzer.GetDiagonal1(), m_analyzer.GetDiagonal2());
 }
 
-std::vector<std::vector<int>> Model::GetLogTable()
+std::vector<std::vector<double>> Model::GetLogTable()
 {
     return m_logManager.GetLogTable();
 }

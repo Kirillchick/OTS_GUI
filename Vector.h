@@ -8,14 +8,15 @@ class Vector
 {
 private:
     const DefinedPoint m_point;
-    int m_initalPosition;
-    std::pair<int, int> m_vectorCoordinate;
-    void SetVectorCoordinate(const int initalPosition);
-    std::pair<int, int> CalculateVectorCoordinate(const int initalPosition) const;
+    double m_initalPosition;
+    std::pair<double, double> m_vectorCoordinate;
+
+    void SetVectorCoordinate(const double initalPosition);
+    std::pair<double, double> CalculateVectorCoordinate(const double initalPosition) const;
 public:
-    explicit Vector(const DefinedPoint point, const int initalPosition);
-    void Recalculate(const int position);
-    std::pair<int, int> GetVectorCoordinate() const;
+    explicit Vector(const DefinedPoint point, const double initalPosition);
+    void Recalculate(const double position);
+    std::pair<double, double> GetVectorCoordinate() const;
 };
 
 #endif // VECTOR_H

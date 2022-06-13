@@ -2,18 +2,20 @@
 #define DEFINEDPOINT_H
 
 #include "TruePoint.h"
+#include <QRandomGenerator>
+#include <QDebug>
 
 class DefinedPoint
 {
 private:
     const TruePoint m_truePoint;
-    const int m_coordinateX;
-    const int m_coordinateY;
-    int GenerateRandomError(const int maxNoiseError) const;
+    const double m_coordinateX;
+    const double m_coordinateY;
+    double GenerateRandomError(const double maxNoiseError) const;
 public:
-    DefinedPoint(const int trueCoordinateX, const int trueCoordinateY, const int maxNoiseError = 3);
-    int getCoordX() const;
-    int getCoordY() const;
+    DefinedPoint(const double trueCoordinateX, const double trueCoordinateY, const double maxNoiseError = 3.0);
+    double getCoordX() const;
+    double getCoordY() const;
 };
 
 #endif // DEFINEDPOINT_H

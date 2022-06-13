@@ -1,6 +1,6 @@
 #include "Visor.h"
 
-Visor::Visor(const int trueCoordinateX, const int trueCoordinateY, const int currentPosition, const int maxAngleError)
+Visor::Visor(const double trueCoordinateX, const double trueCoordinateY, const double currentPosition, const double maxAngleError)
         : m_position(currentPosition),
           m_maxAngleError(maxAngleError),
           m_point(DefinedPoint(trueCoordinateX, trueCoordinateY)),
@@ -22,17 +22,17 @@ Ray Visor::GetNegativeErrorRay() const
     return m_negativeErrorRay;
 }
 
-int Visor::GetMaxAngleErorr() const
+double Visor::GetMaxAngleErorr() const
 {
     return m_maxAngleError;
 }
 
-int Visor::GetAngle() const
+double Visor::GetAngle() const
 {
     return m_angle.GetAngle();
 }
 
-int Visor::GetPosition() const
+double Visor::GetPosition() const
 {
     return m_position;
 }

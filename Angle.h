@@ -7,11 +7,11 @@
 class Angle
 {
 private:
-    int m_angleValue; // degree
-    int СalculateAngle(const Vector vectorCoordinate) const;
+    double m_angleValue; // degree
+    double СalculateAngle(const Vector vectorCoordinate) const;
 public:
     Angle(const Vector vectorCoordinate);
-    int GetAngle() const;
+    double GetAngle() const;
     void Recalculate(const Vector vectorCoordinate);
 };
 

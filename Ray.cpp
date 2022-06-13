@@ -7,23 +7,23 @@
 
 }*/
 
-Ray::Ray(const Angle angle, const int errorSign, const int position, const int maxAngleError)
+Ray::Ray(const Angle angle, const int errorSign, const double position, const double maxAngleError)
     : m_angleValue(angle.GetAngle() + errorSign * maxAngleError),
       m_errorSign(errorSign),
       m_position(position) {}
 
-void Ray::Recalculate(const Angle angle, const int errorSign, const int position, const int maxAngleError)
+void Ray::Recalculate(const Angle angle, const int errorSign, const double position, const double maxAngleError)
 {
     Ray(angle, errorSign, position, maxAngleError);
 }
 
-int Ray::GetAngle() const
+double Ray::GetAngle() const
 {
     return m_angleValue;
 }
 
-/*
+
 int Ray::GetAngleSign() const
 {
-    return Ray::
-}*/
+    return m_errorSign;
+}
