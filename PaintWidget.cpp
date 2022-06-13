@@ -1,4 +1,4 @@
-#include "PaintWidget.h"
+/*#include "PaintWidget.h"
 
 PaintWidget::PaintWidget(QWidget *parent){
 
@@ -99,3 +99,4 @@ void GraphWidget::SetRadiusLink(double arg_radLink)
     radLink = arg_radLink;
 }
 
+*/

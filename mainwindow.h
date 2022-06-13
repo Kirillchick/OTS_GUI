@@ -2,9 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "PaintWidget.h"
+//#include "PaintWidget.h"
 #include <QTimer>
 #include "Model.h"
+#include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,16 +18,16 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    static int numIteration;
+    int numIteration = 0;
 
 private slots:
     void on_simulate_Button_clicked();
-    void paintEvent(QPaintEvent *event);
+    //void paintEvent(QPaintEvent *event);
     void Iteration(Model* model);
 
 private:
     Ui::MainWindow *ui;
-    PaintWidget* pW;
+    //PaintWidget* pW;
     QTimer* timer;
     Model* simulationModel;
 };

@@ -1,4 +1,4 @@
-#ifndef PAINTWIDGET_H
+/*#ifndef PAINTWIDGET_H
 #define PAINTWIDGET_H
 #include <QWidget>
 #include <QPainter>
@@ -26,3 +26,4 @@ public:
            double y_max,double X, double Y, int &ScrX, int &ScrY);
 };
 #endif // PAINTWIDGET_H
+*/

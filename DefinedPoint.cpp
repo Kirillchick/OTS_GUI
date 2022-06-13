@@ -7,9 +7,10 @@ DefinedPoint::DefinedPoint(const int trueCoordinateX, const int tureCoordinateY,
 
 int DefinedPoint::GenerateRandomError(const int maxNoiseError) const
 {
-    std::seed_seq sseq(0, 100);
+    /*std::seed_seq sseq(0, 100);
     QRandomGenerator randomNumber(sseq);
-    return randomNumber.bounded(-maxNoiseError, maxNoiseError);
+    return randomNumber.bounded(-maxNoiseError, maxNoiseError);*/
+    return maxNoiseError;
 }
 
 int DefinedPoint::getCoordX() const

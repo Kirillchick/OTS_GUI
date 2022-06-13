@@ -6,8 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    MainWindow::numIteration = 0;
-    connect(timer, &QTimer::timeout, this, MainWindow::Iteration(simulationModel));
+    //connect(timer, &QTimer::timeout, this, MainWindow::Iteration(simulationModel));
 }
 
 MainWindow::~MainWindow()
@@ -33,6 +32,10 @@ void MainWindow::Iteration(Model* model)
     if (MainWindow::numIteration < 1000)
     {
         simulationModel->Iteration(MainWindow::numIteration);
+    }
+    else
+    {
+        qDebug() << simulationModel->GetLogTable();
     }
     MainWindow::numIteration += 5;
 }

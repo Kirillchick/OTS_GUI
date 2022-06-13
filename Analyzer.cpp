@@ -59,3 +59,4 @@ void Analyzer::Recalculate(const Visor &visor1, const Visor &visor2)
 {
     Analyzer(visor1, visor2);
 }
+
