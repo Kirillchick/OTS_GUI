@@ -60,7 +60,7 @@ void Analyzer::CalculateDiagonals()
 
 void Analyzer::Recalculate(const Visor &visor1, const Visor &visor2)
 {
-    Analyzer(visor1, visor2);
+    InitializeAttributes(visor1, visor2);
 }
 
 double Analyzer::GetDiagonal1() const

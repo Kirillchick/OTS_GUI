@@ -25,21 +25,35 @@ void MainWindow::on_simulate_Button_clicked()
     double maxAngleError = ui->e_input->text().toDouble();
     simulationModel = new Model(truePointCoordX, truePointCoordY, baseL, maxAngleError);
 
-    timer->start(1000);
+    timer->start(10);
     //timer->start(100);
 }
 
 void MainWindow::Iteration()
 {
-    if (numIteration < 200)
+    QFile logFile("C:/Projects/Qt/OTS/OTS_Project/log.txt");
+    if (!logFile.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        qDebug() << "File cannot open";
+        return;
+    }
+    QTextStream out(&logFile);
+    if (numIteration < 500)
     {
         simulationModel->Iteration(numIteration);
-        qDebug() << numIteration;
     }
     else
     {
         timer->stop();
-        qDebug() << simulationModel->GetLogTable();
+        for (int i = 0; i < simulationModel->GetLogTable().size(); ++i)
+        {
+            for (int j = 0; j < simulationModel->GetLogTable()[i].size(); ++j)
+            {
+                out << simulationModel->GetLogTable()[i][j] << " ";
+            }
+            out << "\n";
+        }
+        qDebug() << "END";
     }
     numIteration += 5;
 }

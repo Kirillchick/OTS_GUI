@@ -2,6 +2,7 @@
 #define LOGMANAGER_H
 
 #include <vector>
+#include <QDebug>
 
 class LogManager
 {

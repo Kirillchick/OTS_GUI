@@ -38,6 +38,6 @@ void Visor::Recalculate(const int position)
 {
     m_vectorCoordinate.Recalculate(position);
     m_angle.Recalculate(m_vectorCoordinate);
-    m_positiveErrorRay.Recalculate(m_angle, Ray::POSITIVE, position, m_maxAngleError);
-    m_negativeErrorRay.Recalculate(m_angle, Ray::NEGATIVE, position, m_maxAngleError);
+    m_positiveErrorRay.Recalculate(m_angle, position);
+    m_negativeErrorRay.Recalculate(m_angle, position);
 }
