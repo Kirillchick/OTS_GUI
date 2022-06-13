@@ -16,7 +16,7 @@ private:
     Ray m_negativeErrorRay;
 public:
     // Если что добавить что ошибки разные в конструктор
-    Visor(const double trueCoordinateX, const double trueCoordinateY, const double currentPosition, const double maxAngleError);
+    Visor(const DefinedPoint& point, const double currentPosition, const double maxAngleError);
     Ray GetPositiveErrorRay() const;
     Ray GetNegativeErrorRay() const;
     double GetMaxAngleErorr() const;

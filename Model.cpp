@@ -2,8 +2,9 @@
 
 Model::Model(const double trueCoordinateX, const double trueCoordinateY, const double baseL, const double maxAngleError, const double position)
     : m_baseL(baseL),
-      m_visor1(Visor(trueCoordinateX, trueCoordinateY, position, maxAngleError)),
-      m_visor2(Visor(trueCoordinateX, trueCoordinateY, position + m_baseL, maxAngleError)),
+      m_defPoint(trueCoordinateX, trueCoordinateY),
+      m_visor1(Visor(m_defPoint, position, maxAngleError)),
+      m_visor2(Visor(m_defPoint, position + m_baseL, maxAngleError)),
       m_analyzer(Analyzer(m_visor1, m_visor2)),
       m_logManager(m_analyzer.GetDiagonal1(), m_analyzer.GetDiagonal2())
 {

@@ -6,6 +6,7 @@
 #include <QTimer>
 #include "Model.h"
 #include <QDebug>
+#include <QFile>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,15 +19,18 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    int numIteration = 0;
+
+public slots:
+    void Iteration();
 
 private slots:
     void on_simulate_Button_clicked();
+
     //void paintEvent(QPaintEvent *event);
-    void Iteration(Model* model);
 
 private:
     Ui::MainWindow *ui;
+    int numIteration = 0;
     //PaintWidget* pW;
     QTimer* timer;
     Model* simulationModel;

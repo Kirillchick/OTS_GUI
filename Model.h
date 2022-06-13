@@ -9,6 +9,7 @@ class  Model
 {
 private:
     double m_baseL;
+    const DefinedPoint m_defPoint;
     Visor m_visor1;
     Visor m_visor2;
     Analyzer m_analyzer;

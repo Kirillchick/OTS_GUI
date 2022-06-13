@@ -74,7 +74,11 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="x_input"/>
+      <widget class="QLineEdit" name="x_input">
+       <property name="text">
+        <string>80</string>
+       </property>
+      </widget>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="Label3">
@@ -89,7 +93,11 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QLineEdit" name="y_input"/>
+      <widget class="QLineEdit" name="y_input">
+       <property name="text">
+        <string>50</string>
+       </property>
+      </widget>
      </item>
      <item row="3" column="0">
       <widget class="QLabel" name="Label4">
@@ -104,7 +112,11 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QLineEdit" name="L_input"/>
+      <widget class="QLineEdit" name="L_input">
+       <property name="text">
+        <string>20</string>
+       </property>
+      </widget>
      </item>
      <item row="4" column="0">
       <widget class="QLabel" name="Label5">
@@ -119,7 +131,11 @@
       </widget>
      </item>
      <item row="4" column="1">
-      <widget class="QLineEdit" name="e_input"/>
+      <widget class="QLineEdit" name="e_input">
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
      </item>
      <item row="5" column="0">
       <widget class="QPushButton" name="simulate_Button">

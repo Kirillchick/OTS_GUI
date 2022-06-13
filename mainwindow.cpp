@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(Iteration()));
     //connect(timer, &QTimer::timeout, this, MainWindow::Iteration(simulationModel));
 }
 
@@ -17,25 +19,27 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_simulate_Button_clicked()
 {
-    int truePointCoordX = ui->x_input->text().toInt();
-    int truePointCoordY = ui->y_input->text().toInt();
-    int baseL = ui->L_input->text().toInt();
-    int maxAngleError = ui->e_input->text().toInt();
+    double truePointCoordX = ui->x_input->text().toDouble();
+    double truePointCoordY = ui->y_input->text().toDouble();
+    double baseL = ui->L_input->text().toDouble();
+    double maxAngleError = ui->e_input->text().toDouble();
     simulationModel = new Model(truePointCoordX, truePointCoordY, baseL, maxAngleError);
-    timer = new QTimer(this);
 
+    timer->start(1000);
     //timer->start(100);
 }
 
-void MainWindow::Iteration(Model* model)
+void MainWindow::Iteration()
 {
-    if (MainWindow::numIteration < 1000)
+    if (numIteration < 200)
     {
-        simulationModel->Iteration(MainWindow::numIteration);
+        simulationModel->Iteration(numIteration);
+        qDebug() << numIteration;
     }
     else
     {
+        timer->stop();
         qDebug() << simulationModel->GetLogTable();
     }
-    MainWindow::numIteration += 5;
+    numIteration += 5;
 }

@@ -9,7 +9,8 @@ double DefinedPoint::GenerateRandomError(const double maxNoiseError) const
 {
     std::uniform_real_distribution<double> distr(-maxNoiseError, maxNoiseError);
     double randVal = distr(*QRandomGenerator::global());
-    qDebug() << randVal;
+    qDebug() << "RandomValue";
+    qDebug() << QString::number(randVal, 'f', 2).toDouble();
     return QString::number(randVal, 'f', 2).toDouble();
 }
 

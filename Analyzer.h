@@ -3,6 +3,7 @@
 
 #include "Visor.h"
 #include <QtMath> // ?
+#include <QDebug>
 
 class Analyzer
 {
@@ -21,8 +22,8 @@ private:
     void CalculateDiagonals();
 public:
     Analyzer(const Visor& visor1, const Visor& visor2);
-    double GetDiagonal1(); // ?
-    double GetDiagonal2(); // ?
+    double GetDiagonal1() const;
+    double GetDiagonal2() const;
     void Recalculate(const Visor& visor1, const Visor& visor2);
 };
 
