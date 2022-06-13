@@ -72,3 +72,9 @@ double Analyzer::GetDiagonal2() const
 {
     return m_diagonal2;
 }
+
+std::vector<std::pair<double, double>> Analyzer::GetDots() const
+{
+    std::vector<std::pair<double, double>> dotsContainer {m_k1, m_k2, m_k3, m_k4};
+    return dotsContainer;
+}

@@ -8,6 +8,8 @@
 #include <QDebug>
 #include <QFile>
 #include <QTextStream>
+#include <QPainter>
+#include <QPaintEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,7 +28,7 @@ public slots:
 
 private slots:
     void on_simulate_Button_clicked();
-
+    void paintEvent(QPaintEvent *event);
     //void paintEvent(QPaintEvent *event);
 
 private:

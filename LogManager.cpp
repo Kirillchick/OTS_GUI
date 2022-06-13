@@ -2,7 +2,7 @@
 
 LogManager::LogManager(double diagonal1, double diagonal2)
 {
-    Iteration(diagonal1, diagonal2);
+    //Iteration(diagonal1, diagonal2);
 }
 
 void LogManager::Iteration(double diagonal1, double diagonal2)

@@ -25,6 +25,7 @@ public:
     double GetDiagonal1() const;
     double GetDiagonal2() const;
     void Recalculate(const Visor& visor1, const Visor& visor2);
+    std::vector<std::pair<double, double>> GetDots() const;
 };
 
 #endif // ANALYZER_H

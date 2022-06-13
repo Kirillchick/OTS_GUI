@@ -57,3 +57,12 @@ void MainWindow::Iteration()
     }
     numIteration += 5;
 }
+
+void MainWindow::paintEvent(QPaintEvent *event)
+{
+    /*QPainter *paint = new QPainter(this);
+    paint->setPen(Qt::red);
+    paint->drawLine(500, 500, 600, 600);
+    //paint->drawPolygon()*/
+
+}
