@@ -6,7 +6,7 @@
 class TruePoint
 {
 private:
-    const int m_fieldSizeX = 500;
+    const double m_fieldSizeX = 500;
     const int m_fieldSizeY = 500;
     const int m_trueX;
     const int m_trueY;
