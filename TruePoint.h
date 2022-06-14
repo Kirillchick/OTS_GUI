@@ -8,7 +8,6 @@ private:
     const double m_fieldSizeY = 500.0;
     const double m_trueX;
     const double m_trueY;
-    //int GenerateRandomPoint(const int fieldSize) const;
 public:
     explicit TruePoint(const double coordinateX, const double coordinateY);
     int GetTrueX() const;

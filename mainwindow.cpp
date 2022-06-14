@@ -31,13 +31,20 @@ void MainWindow::on_simulate_Button_clicked()
 
 void MainWindow::Iteration()
 {
-    QFile logFile("C:/Projects/Qt/OTS/OTS_Project/log.txt");
-    if (!logFile.open(QIODevice::WriteOnly | QIODevice::Text))
+    QFile logFile1("C:/Projects/Qt/OTS/OTS_Project/logd1.txt");
+    QFile logFile2("C:/Projects/Qt/OTS/OTS_Project/logd2.txt");
+    if (!logFile1.open(QIODevice::WriteOnly | QIODevice::Text))
     {
         qDebug() << "File cannot open";
         return;
     }
-    QTextStream out(&logFile);
+    if (!logFile2.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        qDebug() << "File cannot open";
+        return;
+    }
+    QTextStream out1(&logFile1);
+    QTextStream out2(&logFile2);
     if (numIteration < 500)
     {
         simulationModel->Iteration(numIteration);
@@ -47,15 +54,16 @@ void MainWindow::Iteration()
         timer->stop();
         for (int i = 0; i < simulationModel->GetLogTable().size(); ++i)
         {
-            for (int j = 0; j < simulationModel->GetLogTable()[i].size(); ++j)
+            out1 << simulationModel->GetLogTable()[i][0] << "\n";
+            out2 << simulationModel->GetLogTable()[i][1] << "\n";
+            /*for (int j = 0; j < simulationModel->GetLogTable()[i].size(); ++j)
             {
-                out << simulationModel->GetLogTable()[i][j] << " ";
-            }
-            out << "\n";
+
+            }*/
         }
         qDebug() << "END";
     }
-    numIteration += 5;
+    numIteration += 2;
 }
 
 void MainWindow::paintEvent(QPaintEvent *event)

@@ -2,7 +2,7 @@
 #define ANALYZER_H
 
 #include "Visor.h"
-#include <QtMath> // ?
+#include <QtMath>
 #include <QDebug>
 
 class Analyzer

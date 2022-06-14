@@ -10,7 +10,6 @@ double Angle::GetAngle() const
 
 double Angle::СalculateAngle(const Vector vectorCoordinate) const
 {
-    // Понять что возвращат градус или радиан?
     qDebug() << "AngleSize";
     qDebug() << qAtan2(vectorCoordinate.GetVectorCoordinate().second, vectorCoordinate.GetVectorCoordinate().first);
     return qAtan2(vectorCoordinate.GetVectorCoordinate().second, vectorCoordinate.GetVectorCoordinate().first);

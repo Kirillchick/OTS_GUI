@@ -18,7 +18,6 @@ public:
     Model(const double trueCoordinateX, const double trueCoordinateY, const double baseL, const double maxAngleError, const double position = 0.0);
     void Iteration(double position);
     std::vector<std::vector<double>> GetLogTable();
-    //
 };
 
 #endif // MODEL_H
